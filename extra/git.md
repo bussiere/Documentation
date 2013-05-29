@@ -6,4 +6,5 @@ Tags: github,git
 Quelques commandes utiles pour git :
 
 Pusher directement les pages :
+
     git push origin master:gh-pages
