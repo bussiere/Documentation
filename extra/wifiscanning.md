@@ -1,7 +1,7 @@
 Date: 2013-06-13
 Title: Wifi et Ubuntu / Unix
 Category: Geek
-Tags: wifi,unix,ubuntu,linux;scan;scanning
+Tags: wifi,unix,ubuntu,linux,scan,scanning
 
 
 
@@ -15,5 +15,3 @@ ou encore :
 
 
    iwlist wlan0 scanning
-
-
