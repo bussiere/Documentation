@@ -8,7 +8,7 @@ Tags: python,website,gallerie,script,html
 Un petit script en python pour generer une gallerie statique a partir d'image.
 Avec les images encodées dans la page html.
 
-
+:::python
 	import os
 	path="."  # insert the path to the directory of interest
 	dirList=os.listdir(path)

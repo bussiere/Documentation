@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Documentation diverses</title><link href="http://bussiere.github.com/Documentation/" rel="alternate"></link><link href="http://bussiere.github.com/Documentation/feeds%5Call-en.atom.xml" rel="self"></link><id>http://bussiere.github.com/Documentation/</id><updated>2013-07-15T00:00:00+02:00</updated><entry><title>Script python pour gallerie</title><link href="http://bussiere.github.com/Documentation/script-python-pour-gallerie.html" rel="alternate"></link><updated>2013-07-15T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-07-15:script-python-pour-gallerie.html</id><summary type="html">&lt;p&gt;Un petit script en python pour generer une gallerie statique a partir d'image.
 Avec les images encodées dans la page html.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;os&lt;/span&gt;
-&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nb"&gt;insert&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nb"&gt;path&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;directory&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;interest&lt;/span&gt;
-&lt;span class="n"&gt;dirList&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;os.listdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;path&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;re&lt;/span&gt;
-&lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="nb"&gt;base64&lt;/span&gt;
-&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;tryint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="nx"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nx"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;s&lt;/span&gt;
-
-&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;alphanum_key&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;p&gt;:::python
+    import os
+    path="."  # insert the path to the directory of interest
+    dirList=os.listdir(path)
+    import re
+    import base64
+    def tryint(s):
+        try:
+            return int(s)
+        except:
+            return s&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;def&lt;/span&gt; &lt;span class="nx"&gt;alphanum_key&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot; Turn a string into a list of string and number chunks.&lt;/span&gt;
 &lt;span class="s2"&gt;        &amp;quot;&lt;/span&gt;&lt;span class="nx"&gt;z23a&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; -&amp;gt; [&amp;quot;&lt;/span&gt;&lt;span class="nb"&gt;z&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, 23, &amp;quot;&lt;/span&gt;&lt;span class="nx"&gt;a&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;]&lt;/span&gt;
 &lt;span class="s2"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
