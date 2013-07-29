@@ -227,17 +227,19 @@ Avec les images encodées dans la page html.</p>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/zfs.html">zfs</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a></p>
 </footer><!-- /.post-info -->                <p>Quelques commandes utiles pour zfs :</p>
+<p>Faire un snapshot recursif et le zipper :</p>
+<div class="highlight"><pre><span class="n">zfs</span> <span class="n">snapshot</span> <span class="o">-</span><span class="n">r</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span>
+<span class="n">zfs</span> <span class="n">send</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span> <span class="o">|</span> <span class="n">gzip</span> <span class="o">&gt;</span> <span class="n">july</span><span class="p">.</span><span class="n">gz</span>
+</pre></div>
+
+
 <p>Revenir en arriere :</p>
 <div class="highlight"><pre><span class="n">zfs</span> <span class="n">rollback</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ahrens</span><span class="err">@</span><span class="n">tuesday</span>
 </pre></div>
 
 
 <p>Envoyer et recevoir une image :</p>
-<div class="highlight"><pre><span class="c"># zfs send tank/gozer@0830 &gt; /bkups/gozer.083006</span>
-<span class="c"># zfs receive tank/gozer2@today &lt; /bkups/gozer.083006</span>
-<span class="c"># zfs rename tank/gozer tank/gozer.old</span>
-<span class="c"># zfs rename tank/gozer2 tank/gozer</span>
-</pre></div>
+<div class="highlight"><pre><span class="n">zfs</span> <span class="n">send</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span><span class="err">@</span><span class="mi">0830</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">bkups ...</span></pre></div>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/zfs.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
