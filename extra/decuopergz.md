@@ -1,4 +1,4 @@
-Date: 2013-07-01
+Date: 2013-08-01
 Title: Decouper un fichier avec gz
 Category: Geek
 Tags: gz,file,decouper,compression,cut

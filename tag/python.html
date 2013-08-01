@@ -24,8 +24,46 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/script-python-pour-gallerie.html">Script python pour gallerie</a></h1> 
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">Lister package et modules python</a></h1> 
                     <footer class="post-info">
+        <abbr class="published" title="2013-08-01T00:00:00">
+                jeu. 01 août 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
+</footer><!-- /.post-info --><p>Comment lister les packages ubuntu installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>
+
+<p>Comment lister les modules pythons installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>                </article>
+                            </aside><!-- /#featured -->
+                            <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+                                                
+
+                 
+                        <li><article class="hentry">    
+                <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/script-python-pour-gallerie.html" rel="bookmark"
+                           title="Permalink to Script python pour gallerie">Script python pour gallerie</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
         <abbr class="published" title="2013-07-15T00:00:00">
                 lun. 15 juillet 2013
         </abbr>
@@ -35,7 +73,7 @@
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/website.html">website</a><a href="http://bussiere.github.com/Documentation/tag/gallerie.html">gallerie</a><a href="http://bussiere.github.com/Documentation/tag/script.html">script</a><a href="http://bussiere.github.com/Documentation/tag/html.html">html</a></p>
-</footer><!-- /.post-info --><p>Un petit script en python pour generer une gallerie statique a partir d'image.
+</footer><!-- /.post-info -->                <p>Un petit script en python pour generer une gallerie statique a partir d'image.
 Avec les images encodées dans la page html.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -64,135 +102,8 @@ Avec les images encodées dans la page html.</p>
 25
 26
 27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">path</span><span class="o">=</span><span class="s">&quot;.&quot;</span>  <span class="c"># insert the path to the directory of interest</span>
-<span class="n">dirList</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="k">def</span> <span class="nf">tryint</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">s</span>
-
-<span class="k">def</span> <span class="nf">alphanum_key</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Turn a string into a list of string and number chunks.</span>
-<span class="sd">        &quot;z23a&quot; -&gt; [&quot;z&quot;, 23, &quot;a&quot;]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">[</span> <span class="n">tryint</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;([0-9]+)&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="p">]</span>
-
-<span class="n">dirList</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">alphanum_key</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">writeindex</span><span class="p">(</span><span class="n">compteur</span><span class="p">,</span><span class="n">stri</span><span class="p">,</span><span class="n">taille</span><span class="p">):</span>
-    <span class="n">plusun</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="n">moinsun</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="n">moinsun</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">moinsun</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">compteur</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="n">filef</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
-        <span class="n">moinsun</span> <span class="o">=</span> <span class="s">&quot;index.html&quot;</span>
-    <span class="k">else</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">compteur</span> <span class="o">==</span> <span class="n">taille</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">:</span>
-            <span class="n">plusun</span> <span class="o">=</span> <span class="n">compteur</span>
-        <span class="n">filef</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%d</span><span class="s">.html&#39;</span><span class="o">%</span><span class="n">compteur</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
-
-
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;&lt;body&gt;&lt;center&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">)</span>
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;a href=&#39;http://shiniez.deviantart.com/&#39;&gt;http://shiniez.deviantart.com/&lt;/a&gt;&lt;br&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">)</span>
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;a href=&#39;index.html&#39;&gt;&lt;&lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%s</span><span class="s">.html&#39;&gt;&lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%d</span><span class="s">.html&#39;&gt;&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%d</span><span class="s">.html&#39;&gt;&gt;&gt;&lt;/a&gt;&lt;br&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">moinsun</span><span class="p">,</span><span class="n">plusun</span><span class="p">,</span><span class="n">taille</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;img src=&#39;data:image/jpg;base64,</span><span class="si">%s</span><span class="s">&#39;&gt;&lt;br&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="o">%</span><span class="n">stri</span><span class="p">)</span>
-    <span class="n">stri</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;a href=&#39;index.html&#39;&gt;&lt;&lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%s</span><span class="s">.html&#39;&gt;&lt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%d</span><span class="s">.html&#39;&gt;&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a href=&#39;</span><span class="si">%d</span><span class="s">.html&#39;&gt;&gt;&gt;&lt;/a&gt;&lt;br&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">moinsun</span><span class="p">,</span><span class="n">plusun</span><span class="p">,</span><span class="n">taille</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">filef</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;&lt;center&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">)</span>
-
-    <span class="n">filef</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">listimg</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">dirList</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s">&quot;jpg&quot;</span> <span class="ow">in</span> <span class="n">fname</span> <span class="p">:</span>
-        <span class="n">listimg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-
-<span class="n">taille</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listimg</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">img</span> <span class="ow">in</span> <span class="n">listimg</span> <span class="p">:</span>
-            <span class="n">image_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&quot;rb&quot;</span><span class="p">)</span>
-            <span class="n">stri</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">image_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-            <span class="n">image_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-            <span class="n">writeindex</span><span class="p">(</span><span class="n">compteur</span><span class="p">,</span><span class="n">stri</span><span class="p">,</span><span class="n">taille</span><span class="p">)</span>
-            <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">stri</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-</pre></div>
-</td></tr></table>                </article>
-                            </aside><!-- /#featured -->
-                            <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-                                                
-
-                 
-                        <li><article class="hentry">    
-                <header>
-                    <h1><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html" rel="bookmark"
-                           title="Permalink to Lister package et modules python">Lister package et modules python</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2013-05-29T00:00:00">
-                mer. 29 mai 2013
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
-        </address>
-        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
-</footer><!-- /.post-info -->                <p>Comment lister les packages ubuntu installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>
-
-<p>Comment lister les modules pythons installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>
-                <a class="readmore" href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">read more</a>
+28 ...</pre></div></td></tr></table>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/script-python-pour-gallerie.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
                             </ol><!-- /#posts-list -->

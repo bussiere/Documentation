@@ -24,21 +24,27 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-7z.html">Decouper un fichier avec 7z</a></h1> 
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-gz.html">Decouper un fichier avec gz</a></h1> 
                     <footer class="post-info">
-        <abbr class="published" title="2013-07-24T00:00:00">
-                mer. 24 juillet 2013
+        <abbr class="published" title="2013-08-01T00:00:00">
+                jeu. 01 août 2013
         </abbr>
 
                 <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/7z.html">7z</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/decoupe.html">decoupe</a></p>
-</footer><!-- /.post-info --><p>Pour decouper un fichier en archive de 2048M (utile quand le systeme de fichier ne prends pas plus de 4 gigas pour les fichiers.) :</p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/gz.html">gz</a><a href="http://bussiere.github.com/Documentation/tag/file.html">file</a><a href="http://bussiere.github.com/Documentation/tag/decouper.html">decouper</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/cut.html">cut</a></p>
+</footer><!-- /.post-info --><p>Comment decouper un fichier mais peut poser probleme sous windows pour cause d'absence de la commande cat</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="mi">7</span><span class="n">z</span> <span class="n">a</span> <span class="o">-</span><span class="n">v2048m</span> <span class="o">-</span><span class="n">mx0</span> <span class="n">Secretaire</span><span class="mf">.7</span><span class="n">z</span> <span class="n">Secretaire</span><span class="p">.</span><span class="n">mkv</span>
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># create archives</span>
+<span class="err">$</span> <span class="n">gzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">my_large_file</span> <span class="o">|</span> <span class="n">split</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1024</span><span class="n">MiB</span> <span class="o">-</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span>
+<span class="cp"># uncompress</span>
+<span class="err">$</span> <span class="n">cat</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span><span class="o">*</span> <span class="o">|</span> <span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="o">&gt;</span> <span class="n">my_large_file</span>
 </pre></div>
 </td></tr></table>                </article>
                             </aside><!-- /#featured -->
@@ -51,34 +57,28 @@
                  
                         <li><article class="hentry">    
                 <header>
-                    <h1><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-gz.html" rel="bookmark"
-                           title="Permalink to Decouper un fichier avec gz">Decouper un fichier avec gz</a></h1>
+                    <h1><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-7z.html" rel="bookmark"
+                           title="Permalink to Decouper un fichier avec 7z">Decouper un fichier avec 7z</a></h1>
                 </header>
                 
                 <div class="entry-content">
                 <footer class="post-info">
-        <abbr class="published" title="2013-07-01T00:00:00">
-                lun. 01 juillet 2013
+        <abbr class="published" title="2013-07-24T00:00:00">
+                mer. 24 juillet 2013
         </abbr>
 
                 <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/gz.html">gz</a><a href="http://bussiere.github.com/Documentation/tag/file.html">file</a><a href="http://bussiere.github.com/Documentation/tag/decouper.html">decouper</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/cut.html">cut</a></p>
-</footer><!-- /.post-info -->                <p>Comment decouper un fichier mais peut poser probleme sous windows pour cause d'absence de la commande cat</p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/7z.html">7z</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/decoupe.html">decoupe</a></p>
+</footer><!-- /.post-info -->                <p>Pour decouper un fichier en archive de 2048M (utile quand le systeme de fichier ne prends pas plus de 4 gigas pour les fichiers.) :</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="cp"># create archives</span>
-<span class="err">$</span> <span class="n">gzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">my_large_file</span> <span class="o">|</span> <span class="n">split</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1024</span><span class="n">MiB</span> <span class="o">-</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span>
-<span class="cp"># uncompress</span>
-<span class="err">$</span> <span class="n">cat</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span><span class="o">*</span> <span class="o">|</span> <span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="o">&gt;</span> <span class="n">my_large_file</span>
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="mi">7</span><span class="n">z</span> <span class="n">a</span> <span class="o">-</span><span class="n">v2048m</span> <span class="o">-</span><span class="n">mx0</span> <span class="n">Secretaire</span><span class="mf">.7</span><span class="n">z</span> <span class="n">Secretaire</span><span class="p">.</span><span class="n">mkv</span>
 </pre></div>
 </td></tr></table>
-                <a class="readmore" href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-gz.html">read more</a>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-7z.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
                             </ol><!-- /#posts-list -->
