@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8">
-        <title>Documentation diverses - wifi</title>
+        <title>Documentation diverses - packages</title>
         <link rel="stylesheet" href="http://bussiere.github.com/Documentation/theme/css/main.css">
                 <link href="http://bussiere.github.com/Documentation/feeds\all.atom.xml" type="application/atom+xml" rel="alternate" title="Documentation diverses Atom Feed" />
                 
@@ -24,27 +24,30 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/wifi-et-ubuntu-unix.html">Wifi et Ubuntu / Unix</a></h1> 
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">Lister package et modules python</a></h1> 
                     <footer class="post-info">
-        <abbr class="published" title="2013-06-13T00:00:00">
-                jeu. 13 juin 2013
+        <abbr class="published" title="2013-05-29T00:00:00">
+                mer. 29 mai 2013
         </abbr>
 
                 <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/wifi.html">wifi</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/scan.html">scan</a><a href="http://bussiere.github.com/Documentation/tag/scanning.html">scanning</a></p>
-</footer><!-- /.post-info --><p>Pour scanner les reseaux wifi aux alentours.</p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
+</footer><!-- /.post-info --><p>Comment lister les packages ubuntu installes :</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">iwlist</span> <span class="n">wlan0</span> <span class="n">scan</span>
+<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 </td></tr></table>
 
-<p>ou encore :</p>
-<p>#!/usr/bin/env
-   iwlist wlan0 scanning</p>                </article>
+<p>Comment lister les modules pythons installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>                </article>
                                     <p class="paginator">
         Page 1 / 1
     </p>

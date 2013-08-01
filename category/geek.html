@@ -128,6 +128,41 @@ Avec les images encodées dans la page html.</p>
                  
                         <li><article class="hentry">    
                 <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-gz.html" rel="bookmark"
+                           title="Permalink to Decouper un fichier avec gz">Decouper un fichier avec gz</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
+        <abbr class="published" title="2013-07-01T00:00:00">
+                lun. 01 juillet 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/gz.html">gz</a><a href="http://bussiere.github.com/Documentation/tag/file.html">file</a><a href="http://bussiere.github.com/Documentation/tag/decouper.html">decouper</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/cut.html">cut</a></p>
+</footer><!-- /.post-info -->                <p>Comment decouper un fichier mais peut poser probleme sous windows pour cause d'absence de la commande cat</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># create archives</span>
+<span class="err">$</span> <span class="n">gzip</span> <span class="o">-</span><span class="n">c</span> <span class="n">my_large_file</span> <span class="o">|</span> <span class="n">split</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1024</span><span class="n">MiB</span> <span class="o">-</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span>
+<span class="cp"># uncompress</span>
+<span class="err">$</span> <span class="n">cat</span> <span class="n">myfile_split</span><span class="p">.</span><span class="n">gz_</span><span class="o">*</span> <span class="o">|</span> <span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="o">&gt;</span> <span class="n">my_large_file</span>
+</pre></div>
+</td></tr></table>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-gz.html">read more</a>
+                                </div><!-- /.entry-content -->
+            </article></li>
+                            
+
+                 
+                        <li><article class="hentry">    
+                <header>
                     <h1><a href="http://bussiere.github.com/Documentation/raccourcis-ubuntu.html" rel="bookmark"
                            title="Permalink to Raccourcis ubuntu">Raccourcis ubuntu</a></h1>
                 </header>
@@ -144,8 +179,11 @@ Avec les images encodées dans la page html.</p>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/raccourcis.html">raccourcis</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/launch.html">launch</a></p>
 </footer><!-- /.post-info -->                <p>Pour creer un raccourcis en ligne de commande :</p>
-<div class="highlight"><pre><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">chemin</span><span class="o">/</span><span class="n">de</span><span class="o">/</span><span class="n">l</span><span class="err">&#39;</span><span class="n">ex</span><span class="err">é</span><span class="n">cutable</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">chemin</span><span class="o">/</span><span class="n">de</span><span class="o">/</span><span class="n">l</span><span class="err">&#39;</span><span class="n">ex</span><span class="err">é</span><span class="n">cutable</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span>
 </pre></div>
+</td></tr></table>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/raccourcis-ubuntu.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
@@ -170,12 +208,15 @@ Avec les images encodées dans la page html.</p>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/wifi.html">wifi</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/scan.html">scan</a><a href="http://bussiere.github.com/Documentation/tag/scanning.html">scanning</a></p>
 </footer><!-- /.post-info -->                <p>Pour scanner les reseaux wifi aux alentours.</p>
-<div class="highlight"><pre><span class="n">iwlist</span> <span class="n">wlan0</span> <span class="n">scan</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">iwlist</span> <span class="n">wlan0</span> <span class="n">scan</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>ou encore :</p>
-<p>iwlist wlan0 scanning</p>
+<p>#!/usr/bin/env
+   iwlist wlan0 scanning</p>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/wifi-et-ubuntu-unix.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
@@ -211,6 +252,42 @@ Avec les images encodées dans la page html.</p>
                  
                         <li><article class="hentry">    
                 <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html" rel="bookmark"
+                           title="Permalink to Lister package et modules python">Lister package et modules python</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
+        <abbr class="published" title="2013-05-29T00:00:00">
+                mer. 29 mai 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
+</footer><!-- /.post-info -->                <p>Comment lister les packages ubuntu installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>
+
+<p>Comment lister les modules pythons installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">read more</a>
+                                </div><!-- /.entry-content -->
+            </article></li>
+                            
+
+                 
+                        <li><article class="hentry">    
+                <header>
                     <h1><a href="http://bussiere.github.com/Documentation/zfs.html" rel="bookmark"
                            title="Permalink to Zfs">Zfs</a></h1>
                 </header>
@@ -228,18 +305,18 @@ Avec les images encodées dans la page html.</p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/zfs.html">zfs</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a></p>
 </footer><!-- /.post-info -->                <p>Quelques commandes utiles pour zfs :</p>
 <p>Faire un snapshot recursif et le zipper :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">snapshot</span> <span class="o">-</span><span class="n">r</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">zfs</span> <span class="n">snapshot</span> <span class="o">-</span><span class="n">r</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span>
 <span class="n">zfs</span> <span class="n">send</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span> <span class="o">|</span> <span class="n">gzip</span> <span class="o">&gt;</span> <span class="n">july</span><span class="p">.</span><span class="n">gz</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Revenir en arriere :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">rollback</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ahrens</span><span class="err">@</span><span class="n">tuesday</span>
-</pre></div>
-
-
-<p>Envoyer et recevoir une image :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">send</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span><span class="err">@</span><span class="mi">0830</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">bkups ...</span></pre></div>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">zfs</span> <span class="n">rollback</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ahrens</span><span class="err">@</span><span class="n">tuesday ...</span></pre></div></td></tr></table>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/zfs.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
@@ -273,37 +350,10 @@ Avec les images encodées dans la page html.</p>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/petite-puterie-en-java.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
-                            
-
-                 
-                        <li><article class="hentry">    
-                <header>
-                    <h1><a href="http://bussiere.github.com/Documentation/les-query-en-django.html" rel="bookmark"
-                           title="Permalink to Les Query en django">Les Query en django</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2012-12-19T00:00:00">
-                mer. 19 décembre 2012
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
-        </address>
-        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/django.html">Django</a><a href="http://bussiere.github.com/Documentation/tag/query.html">Query</a><a href="http://bussiere.github.com/Documentation/tag/sql.html">Sql</a></p>
-</footer><!-- /.post-info -->                <p>Pour ceux qui ne sont pas au courant, Django c'est le bien.</p>
-<p>Sauf que je galere tout le temps avec les query, du coup cet article va me servir de pense bete a moi aussi et de tutorial pour vous.
-Je m'appui</p>
-<p>Donc :</p>
-<p>Recuperer tout les objets d ...</p>
-                <a class="readmore" href="http://bussiere.github.com/Documentation/les-query-en-django.html">read more</a>
-                                </div><!-- /.entry-content -->
-            </article></li>
                             </ol><!-- /#posts-list -->
                             <p class="paginator">
-        Page 1 / 1
+        Page 1 / 2
+            <a href="http://bussiere.github.com/Documentation/category/geek2.html">&raquo;</a>
     </p>
                         </section><!-- /#content -->
                     <section id="extras" class="body">

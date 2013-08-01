@@ -40,22 +40,33 @@
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/zfs.html">zfs</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a></p>
 </footer><!-- /.post-info -->      <p>Quelques commandes utiles pour zfs :</p>
 <p>Faire un snapshot recursif et le zipper :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">snapshot</span> <span class="o">-</span><span class="n">r</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">zfs</span> <span class="n">snapshot</span> <span class="o">-</span><span class="n">r</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span>
 <span class="n">zfs</span> <span class="n">send</span> <span class="n">rpool</span><span class="o">/</span><span class="n">ROOT</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">-</span><span class="mi">1</span><span class="err">@</span><span class="n">july</span> <span class="o">|</span> <span class="n">gzip</span> <span class="o">&gt;</span> <span class="n">july</span><span class="p">.</span><span class="n">gz</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Revenir en arriere :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">rollback</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ahrens</span><span class="err">@</span><span class="n">tuesday</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">zfs</span> <span class="n">rollback</span> <span class="n">tank</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ahrens</span><span class="err">@</span><span class="n">tuesday</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Envoyer et recevoir une image :</p>
-<div class="highlight"><pre><span class="n">zfs</span> <span class="n">send</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span><span class="err">@</span><span class="mi">0830</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">bkups</span><span class="o">/</span><span class="n">gozer</span><span class="mf">.083006</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">zfs</span> <span class="n">send</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span><span class="err">@</span><span class="mi">0830</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">bkups</span><span class="o">/</span><span class="n">gozer</span><span class="mf">.083006</span>
 <span class="n">zfs</span> <span class="n">receive</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer2</span><span class="err">@</span><span class="n">today</span> <span class="o">&lt;</span> <span class="o">/</span><span class="n">bkups</span><span class="o">/</span><span class="n">gozer</span><span class="mf">.083006</span>
 <span class="n">zfs</span> <span class="n">rename</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span><span class="p">.</span><span class="n">old</span>
 <span class="n">zfs</span> <span class="n">rename</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer2</span> <span class="n">tank</span><span class="o">/</span><span class="n">gozer</span>
 </pre></div>
+</td></tr></table>
     </div><!-- /.entry-content -->
     
   </article>

@@ -7,7 +7,7 @@ Tags: raccourcis,unix,ubuntu,linux,launch
 
 Pour creer un raccourcis en ligne de commande :
 
-
+	#!/usr/bin/env
 	sudo ln -s /chemin/de/l'exécutable /usr/bin
 
 
