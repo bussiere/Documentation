@@ -24,8 +24,50 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/raccourcis-ubuntu.html">Raccourcis ubuntu</a></h1> 
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/ntfs-et-linux.html">Ntfs et Linux</a></h1> 
                     <footer class="post-info">
+        <abbr class="published" title="2013-08-05T00:00:00">
+                lun. 05 août 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+        <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/ntfs.html">ntfs</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/formater.html">formater</a><a href="http://bussiere.github.com/Documentation/tag/monter.html">monter</a><a href="http://bussiere.github.com/Documentation/tag/mount.html">mount</a><a href="http://bussiere.github.com/Documentation/tag/format.html">format</a></p>
+</footer><!-- /.post-info --><p>Comment formatter un disque dur en ntfs :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment formatter en ntfs</span>
+<span class="err">$</span>  <span class="n">mkntfs</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sde1</span>
+</pre></div>
+</td></tr></table>
+
+<p>Comment monter un disque dur ntfs :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment monter un disque dur ntfs</span>
+<span class="err">$</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">ntfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">nls</span><span class="o">=</span><span class="n">utf8</span><span class="p">,</span><span class="n">umask</span><span class="o">=</span><span class="mo">0222</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hdb1</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">c</span>
+</pre></div>
+</td></tr></table>                </article>
+                            </aside><!-- /#featured -->
+                            <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+                                                
+
+                 
+                        <li><article class="hentry">    
+                <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/raccourcis-ubuntu.html" rel="bookmark"
+                           title="Permalink to Raccourcis ubuntu">Raccourcis ubuntu</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
         <abbr class="published" title="2013-07-01T00:00:00">
                 lun. 01 juillet 2013
         </abbr>
@@ -35,18 +77,16 @@
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
 <p>tags: <a href="http://bussiere.github.com/Documentation/tag/raccourcis.html">raccourcis</a><a href="http://bussiere.github.com/Documentation/tag/unix.html">unix</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/launch.html">launch</a></p>
-</footer><!-- /.post-info --><p>Pour creer un raccourcis en ligne de commande :</p>
+</footer><!-- /.post-info -->                <p>Pour creer un raccourcis en ligne de commande :</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
 <span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">chemin</span><span class="o">/</span><span class="n">de</span><span class="o">/</span><span class="n">l</span><span class="err">&#39;</span><span class="n">ex</span><span class="err">é</span><span class="n">cutable</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span>
 </pre></div>
-</td></tr></table>                </article>
-                            </aside><!-- /#featured -->
-                            <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-                                                
+</td></tr></table>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/raccourcis-ubuntu.html">read more</a>
+                                </div><!-- /.entry-content -->
+            </article></li>
+                            
 
                  
                         <li><article class="hentry">    

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8">
-        <title>Decouper un fichier avec 7z</title>
+        <title>Documentation diverses - mount</title>
         <link rel="stylesheet" href="http://bussiere.github.com/Documentation/theme/css/main.css">
                 <link href="http://bussiere.github.com/Documentation/feeds\all.atom.xml" type="application/atom+xml" rel="alternate" title="Documentation diverses Atom Feed" />
                 
@@ -16,45 +16,49 @@
                 <h1><a href="http://bussiere.github.com/Documentation/">Documentation diverses </a></h1>
                 <nav><ul>
                                                                                     <li ><a href="http://bussiere.github.com/Documentation/category/blog.html">Blog</a></li>
-                                    <li class="active"><a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a></li>
+                                    <li ><a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a></li>
                                                 </ul></nav>
         </header><!-- /#banner -->
-        <section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-7z.html" rel="bookmark"
-           title="Permalink to Decouper un fichier avec 7z">Decouper un fichier avec 7z</a></h1>
-          </header>
+                
+            
 
-    <div class="entry-content">
-      <footer class="post-info">
-        <abbr class="published" title="2013-07-24T00:00:00">
-                mer. 24 juillet 2013
+                            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/ntfs-et-linux.html">Ntfs et Linux</a></h1> 
+                    <footer class="post-info">
+        <abbr class="published" title="2013-08-05T00:00:00">
+                lun. 05 août 2013
         </abbr>
 
                 <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
         <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/7z.html">7z</a><a href="http://bussiere.github.com/Documentation/tag/compression.html">compression</a><a href="http://bussiere.github.com/Documentation/tag/decoupe.html">decoupe</a><a href="http://bussiere.github.com/Documentation/tag/cryptage.html">cryptage</a><a href="http://bussiere.github.com/Documentation/tag/cryptographie.html">cryptographie</a></p>
-</footer><!-- /.post-info -->      <p>Pour decouper un fichier en archive de 2048M (utile quand le systeme de fichier ne prends pas plus de 4 gigas pour les fichiers.) :</p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/ntfs.html">ntfs</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/formater.html">formater</a><a href="http://bussiere.github.com/Documentation/tag/monter.html">monter</a><a href="http://bussiere.github.com/Documentation/tag/mount.html">mount</a><a href="http://bussiere.github.com/Documentation/tag/format.html">format</a></p>
+</footer><!-- /.post-info --><p>Comment formatter un disque dur en ntfs :</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="cp"># Comment decouper :</span>
-<span class="err">$</span> <span class="mi">7</span><span class="n">z</span> <span class="n">a</span> <span class="o">-</span><span class="n">v2048m</span> <span class="o">-</span><span class="n">mx0</span> <span class="n">Secretaire</span><span class="mf">.7</span><span class="n">z</span> <span class="n">Secretaire</span><span class="p">.</span><span class="n">mkv</span>
-<span class="cp"># Comment decouper ET crypter :</span>
-<span class="err">$</span> <span class="mi">7</span><span class="n">z</span> <span class="n">a</span> <span class="o">-</span><span class="n">mhe</span><span class="o">=</span><span class="n">on</span> <span class="o">-</span><span class="n">pMotdePasse</span> <span class="o">-</span><span class="n">v90m</span> <span class="o">-</span><span class="n">mx0</span> <span class="n">Emmanuel</span><span class="mf">.7</span><span class="n">z</span> <span class="n">Emmanuel</span><span class="o">/</span>
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment formatter en ntfs</span>
+<span class="err">$</span>  <span class="n">mkntfs</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sde1</span>
 </pre></div>
 </td></tr></table>
-    </div><!-- /.entry-content -->
-    
-  </article>
-</section>
-        <section id="extras" class="body">
+
+<p>Comment monter un disque dur ntfs :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment monter un disque dur ntfs</span>
+<span class="err">$</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">ntfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">nls</span><span class="o">=</span><span class="n">utf8</span><span class="p">,</span><span class="n">umask</span><span class="o">=</span><span class="mo">0222</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hdb1</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">c</span>
+</pre></div>
+</td></tr></table>                </article>
+                                    <p class="paginator">
+        Page 1 / 1
+    </p>
+                            </aside><!-- /#featured -->
+                                                </ol><!-- /#posts-list -->
+                        </section><!-- /#content -->
+                    <section id="extras" class="body">
                         <div class="blogroll">
                         <h2>blogroll</h2>
                         <ul>
