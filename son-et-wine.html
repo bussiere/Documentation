@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Son et wine</title>
+        <link rel="stylesheet" href="http://bussiere.github.com/Documentation/theme/css/main.css" />
+        <link href="http://bussiere.github.com/Documentation/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Documentation diverses Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://bussiere.github.com/Documentation/">Documentation diverses </a></h1>
+                <nav><ul>
+                    <li><a href="http://bussiere.github.com/Documentation/category/blog.html">Blog</a></li>
+                    <li class="active"><a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://bussiere.github.com/Documentation/son-et-wine.html" rel="bookmark"
+           title="Permalink to Son et wine">Son et wine</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-05T00:00:00">
+                lun. 05 août 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+<p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/ntfs.html">ntfs</a><a href="http://bussiere.github.com/Documentation/tag/linux.html">linux</a><a href="http://bussiere.github.com/Documentation/tag/formater.html">formater</a><a href="http://bussiere.github.com/Documentation/tag/monter.html">monter</a><a href="http://bussiere.github.com/Documentation/tag/mount.html">mount</a><a href="http://bussiere.github.com/Documentation/tag/format.html">format</a></p>
+</footer><!-- /.post-info -->      <p>Bad Sound in Wine 1.4 under Ubuntu 12.04 12.10 13.04 x64
+Submitted by Jean-Paul on Sun, 05/06/2012 - 19:46</p>
+<p>I did a lot of searching for a solution to this problem. Any programs that I would run with Wine had horrible sound. It was almost like an underrun or something like that. I unfortunately don't have output from the terminal, but thankfully I do have a solution, as posted on Wine's wiki. Just to be clear, the sound I was getting was kind of scratchy, like a "farting" noise. I would get the same scratchy sound when using winecfg's "test sound" button, and it didn't matter what options I chose. So, here's the fix!</p>
+<ol>
+<li>
+<p>Edit your /etc/pulse/daemon.conf</p>
+</li>
+<li>
+<p>Scroll down to the line that reads "default-fragment-size-msec = 10"</p>
+</li>
+<li>
+<p>Change the 10 to a 5 and save.</p>
+</li>
+<li>
+<p>Restart pulseaudio or reboot. Maybe. I called "sudo /etc/init.d/pulseaudio restart" but got no output, so this might not be required.</p>
+</li>
+<li>
+<p>Post a comment if this worked for you!</p>
+</li>
+</ol>
+<p>Comment formatter un disque dur en ntfs :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment formatter en ntfs</span>
+<span class="err">$</span>  <span class="n">mkntfs</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sde1</span>
+</pre></div>
+</td></tr></table>
+
+<p>Comment monter un disque dur ntfs :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="cp"># Comment monter un disque dur ntfs</span>
+<span class="err">$</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">ntfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">nls</span><span class="o">=</span><span class="n">utf8</span><span class="p">,</span><span class="n">umask</span><span class="o">=</span><span class="mo">0222</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hdb1</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">c</span>
+</pre></div>
+</td></tr></table>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
+                            <li><a href="http://python.org">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://bussiere.github.com/Documentation/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/bussiere">Bussiere</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

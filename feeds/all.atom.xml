@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Documentation diverses</title><link href="http://bussiere.github.com/Documentation/" rel="alternate"></link><link href="http://bussiere.github.com/Documentation/feeds%5Call.atom.xml" rel="self"></link><id>http://bussiere.github.com/Documentation/</id><updated>2013-08-05T00:00:00+02:00</updated><entry><title>Copier les fichiers caches et repertoires</title><link href="http://bussiere.github.com/Documentation/copier-les-fichiers-caches-et-repertoires.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:copier-les-fichiers-caches-et-repertoires.html</id><summary type="html">&lt;p&gt;Comment copier les fichiers caches et repertoires :&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Documentation diverses</title><link href="http://bussiere.github.com/Documentation/" rel="alternate"></link><link href="http://bussiere.github.com/Documentation/feeds/all.atom.xml" rel="self"></link><id>http://bussiere.github.com/Documentation/</id><updated>2013-08-05T00:00:00+02:00</updated><entry><title>Copier les fichiers caches et repertoires</title><link href="http://bussiere.github.com/Documentation/copier-les-fichiers-caches-et-repertoires.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:copier-les-fichiers-caches-et-repertoires.html</id><summary type="html">&lt;p&gt;Comment copier les fichiers caches et repertoires :&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/usr/bin/env&lt;/span&gt;
@@ -44,6 +44,42 @@
 &lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="disque dur"></category><category term="dd"></category><category term="commande;liste"></category></entry><entry><title>Ntfs et Linux</title><link href="http://bussiere.github.com/Documentation/ntfs-et-linux.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:ntfs-et-linux.html</id><summary type="html">&lt;p&gt;Comment formatter un disque dur en ntfs :&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/usr/bin/env&lt;/span&gt;
+&lt;span class="cp"&gt;# Comment formatter en ntfs&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;  &lt;span class="n"&gt;mkntfs&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sde1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Comment monter un disque dur ntfs :&lt;/p&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/usr/bin/env&lt;/span&gt;
+&lt;span class="cp"&gt;# Comment monter un disque dur ntfs&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;ntfs&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;nls&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;utf8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;umask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mo"&gt;0222&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;hdb1&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;media&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="ntfs"></category><category term="linux"></category><category term="formater"></category><category term="monter"></category><category term="mount"></category><category term="format"></category></entry><entry><title>Son et wine</title><link href="http://bussiere.github.com/Documentation/son-et-wine.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:son-et-wine.html</id><summary type="html">&lt;p&gt;Bad Sound in Wine 1.4 under Ubuntu 12.04 12.10 13.04 x64
+Submitted by Jean-Paul on Sun, 05/06/2012 - 19:46&lt;/p&gt;
+&lt;p&gt;I did a lot of searching for a solution to this problem. Any programs that I would run with Wine had horrible sound. It was almost like an underrun or something like that. I unfortunately don't have output from the terminal, but thankfully I do have a solution, as posted on Wine's wiki. Just to be clear, the sound I was getting was kind of scratchy, like a "farting" noise. I would get the same scratchy sound when using winecfg's "test sound" button, and it didn't matter what options I chose. So, here's the fix!&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Edit your /etc/pulse/daemon.conf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scroll down to the line that reads "default-fragment-size-msec = 10"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the 10 to a 5 and save.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart pulseaudio or reboot. Maybe. I called "sudo /etc/init.d/pulseaudio restart" but got no output, so this might not be required.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Post a comment if this worked for you!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Comment formatter un disque dur en ntfs :&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/usr/bin/env&lt;/span&gt;
