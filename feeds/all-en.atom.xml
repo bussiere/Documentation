@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Documentation diverses</title><link href="http://bussiere.github.com/Documentation/" rel="alternate"></link><link href="http://bussiere.github.com/Documentation/feeds/all-en.atom.xml" rel="self"></link><id>http://bussiere.github.com/Documentation/</id><updated>2013-08-05T00:00:00+02:00</updated><entry><title>Copier les fichiers caches et repertoires</title><link href="http://bussiere.github.com/Documentation/copier-les-fichiers-caches-et-repertoires.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:copier-les-fichiers-caches-et-repertoires.html</id><summary type="html">&lt;p&gt;Comment copier les fichiers caches et repertoires :&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Documentation diverses</title><link href="http://bussiere.github.com/Documentation/" rel="alternate"></link><link href="http://bussiere.github.com/Documentation/feeds/all-en.atom.xml" rel="self"></link><id>http://bussiere.github.com/Documentation/</id><updated>2014-01-22T00:00:00+01:00</updated><entry><title>Fichier hgrc</title><link href="http://bussiere.github.com/Documentation/fichier-hgrc.html" rel="alternate"></link><updated>2014-01-22T00:00:00+01:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2014-01-22:fichier-hgrc.html</id><summary type="html">&lt;p&gt;fichier basique hgrc in .hg&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
+&lt;span class="na"&gt;default&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;https://titi@bitbucket.org/titi/projet&lt;/span&gt;
+&lt;span class="k"&gt;[ui]&lt;/span&gt;
+&lt;span class="na"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;titi &amp;lt;titi@gmail.com&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="mercurial"></category><category term="hgrc"></category></entry><entry><title>Copier les fichiers caches et repertoires</title><link href="http://bussiere.github.com/Documentation/copier-les-fichiers-caches-et-repertoires.html" rel="alternate"></link><updated>2013-08-05T00:00:00+02:00</updated><author><name>Bussiere</name></author><id>tag:bussiere.github.com/Documentation,2013-08-05:copier-les-fichiers-caches-et-repertoires.html</id><summary type="html">&lt;p&gt;Comment copier les fichiers caches et repertoires :&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/usr/bin/env&lt;/span&gt;
@@ -112,6 +117,11 @@ Submitted by Jean-Paul on Sun, 05/06/2012 - 19:46&lt;/p&gt;
 &lt;span class="n"&gt;dpkg&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;selections&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;pour reinstaller sans le install dans les fichiers :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;aptitude&lt;/span&gt; &lt;span class="nb"&gt;install&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;textfile&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
 
 &lt;p&gt;Comment lister les modules pythons installes :&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
