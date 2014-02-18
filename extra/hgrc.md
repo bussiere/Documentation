@@ -1,4 +1,4 @@
-Date: 2014-22-01
+Date: 2014-01-22
 Title: Fichier hgrc
 Category: Geek
 Tags: mercurial,hgrc
