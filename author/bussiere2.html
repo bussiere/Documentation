@@ -24,6 +24,45 @@
                     <ol id="posts-list" class="hfeed" start="9">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html" rel="bookmark"
+                           title="Permalink to Lister package et modules python">Lister package et modules python</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-08-01T00:00:00">
+                jeu 01 août 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+<p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
+</footer><!-- /.post-info -->                <p>Comment lister les packages ubuntu installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>
+
+<p>pour reinstaller sans le install dans les fichiers :</p>
+<div class="highlight"><pre><span class="nx">aptitude</span> <span class="nb">install</span> <span class="err">$</span><span class="p">(</span><span class="nx">cat</span> <span class="o">&lt;</span><span class="nx">textfile</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Comment lister les modules pythons installes :</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</td></tr></table>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://bussiere.github.com/Documentation/decouper-un-fichier-avec-7z.html" rel="bookmark"
                            title="Permalink to Decouper un fichier avec 7z">Decouper un fichier avec 7z</a></h1>
                 </header>
@@ -251,6 +290,30 @@ Avec les images encodées dans la page html.</p>
 
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://bussiere.github.com/Documentation/ouvrir-un-programme-avec-un-autre-user.html" rel="bookmark"
+                           title="Permalink to Ouvrir un programme avec un autre user">Ouvrir un programme avec un autre user</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-01-28T00:00:00">
+                lun 28 janvier 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
+        </address>
+<p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/console.html">console</a><a href="http://bussiere.github.com/Documentation/tag/ssh.html">ssh</a><a href="http://bussiere.github.com/Documentation/tag/program.html">program</a><a href="http://bussiere.github.com/Documentation/tag/firefox.html">firefox</a></p>
+</footer><!-- /.post-info -->                <p>Comment ouvrir une program avec un autre user en console :</p>
+<div class="highlight"><pre><span class="n">ssh</span> <span class="o">-</span><span class="n">Y</span> <span class="n">otheruser</span><span class="err">@</span><span class="n">localhost</span> <span class="s">&quot;firefox&quot;</span>
+</pre></div>
+                <a class="readmore" href="http://bussiere.github.com/Documentation/ouvrir-un-programme-avec-un-autre-user.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://bussiere.github.com/Documentation/petite-puterie-en-java.html" rel="bookmark"
                            title="Permalink to Petite Puterie en java">Petite Puterie en java</a></h1>
                 </header>
@@ -276,59 +339,11 @@ Avec les images encodées dans la page html.</p>
                 <a class="readmore" href="http://bussiere.github.com/Documentation/petite-puterie-en-java.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://bussiere.github.com/Documentation/les-query-en-django.html" rel="bookmark"
-                           title="Permalink to Les Query en django">Les Query en django</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-12-19T00:00:00">
-                mer 19 décembre 2012
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
-        </address>
-<p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/django.html">Django</a><a href="http://bussiere.github.com/Documentation/tag/query.html">Query</a><a href="http://bussiere.github.com/Documentation/tag/sql.html">Sql</a></p>
-</footer><!-- /.post-info -->                <p>Pour ceux qui ne sont pas au courant, Django c'est le bien.</p>
-<p>Sauf que je galere tout le temps avec les query, du coup cet article va me servir de pense bete a moi aussi et de tutorial pour vous.
-Je m'appui</p>
-<p>Donc :</p>
-<p>Recuperer tout les objets d ...</p>
-                <a class="readmore" href="http://bussiere.github.com/Documentation/les-query-en-django.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://bussiere.github.com/Documentation/readme.html" rel="bookmark"
-                           title="Permalink to Readme">Readme</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2012-11-26T00:00:00">
-                lun 26 novembre 2012
-        </abbr>
-
-        <address class="vcard author">
-                By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
-        </address>
-<p>In <a href="http://bussiere.github.com/Documentation/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/documentation.html">Documentation</a><a href="http://bussiere.github.com/Documentation/tag/.html"></a></p>
-</footer><!-- /.post-info -->                <p>Ce site a pour vocation de regrouper des snippets de doc et trucs divers liés a l'informatique.
-Notamment toute les commandes que j'ai du mal a retenir.</p>
-                <a class="readmore" href="http://bussiere.github.com/Documentation/readme.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">
         <a href="http://bussiere.github.com/Documentation/author/bussiere.html">&laquo;</a>
-    Page 2 / 2
+    Page 2 / 3
+        <a href="http://bussiere.github.com/Documentation/author/bussiere3.html">&raquo;</a>
 </p>
             </section><!-- /#content -->
         <section id="extras" class="body">

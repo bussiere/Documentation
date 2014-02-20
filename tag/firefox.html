@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Documentation diverses - list</title>
+        <title>Documentation diverses - firefox</title>
         <link rel="stylesheet" href="http://bussiere.github.com/Documentation/theme/css/main.css" />
         <link href="http://bussiere.github.com/Documentation/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Documentation diverses Atom Feed" />
 
@@ -22,35 +22,20 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">Lister package et modules python</a></h1>
+                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/ouvrir-un-programme-avec-un-autre-user.html">Ouvrir un programme avec un autre user</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2013-08-01T00:00:00">
-                jeu 01 août 2013
+        <abbr class="published" title="2013-01-28T00:00:00">
+                lun 28 janvier 2013
         </abbr>
 
         <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
 <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
-</footer><!-- /.post-info --><p>Comment lister les packages ubuntu installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>
-
-<p>pour reinstaller sans le install dans les fichiers :</p>
-<div class="highlight"><pre><span class="nx">aptitude</span> <span class="nb">install</span> <span class="err">$</span><span class="p">(</span><span class="nx">cat</span> <span class="o">&lt;</span><span class="nx">textfile</span><span class="o">&gt;</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Comment lister les modules pythons installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>                </article>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a><a href="http://bussiere.github.com/Documentation/tag/console.html">console</a><a href="http://bussiere.github.com/Documentation/tag/ssh.html">ssh</a><a href="http://bussiere.github.com/Documentation/tag/program.html">program</a><a href="http://bussiere.github.com/Documentation/tag/firefox.html">firefox</a></p>
+</footer><!-- /.post-info --><p>Comment ouvrir une program avec un autre user en console :</p>
+<div class="highlight"><pre><span class="n">ssh</span> <span class="o">-</span><span class="n">Y</span> <span class="n">otheruser</span><span class="err">@</span><span class="n">localhost</span> <span class="s">&quot;firefox&quot;</span>
+</pre></div>                </article>
 <p class="paginator">
     Page 1 / 1
 </p>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Documentation diverses - list</title>
+        <title>Erlang</title>
         <link rel="stylesheet" href="http://bussiere.github.com/Documentation/theme/css/main.css" />
         <link href="http://bussiere.github.com/Documentation/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Documentation diverses Atom Feed" />
 
@@ -16,47 +16,49 @@
                 <h1><a href="http://bussiere.github.com/Documentation/">Documentation diverses </a></h1>
                 <nav><ul>
                     <li><a href="http://bussiere.github.com/Documentation/category/blog.html">Blog</a></li>
-                    <li><a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a></li>
+                    <li class="active"><a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://bussiere.github.com/Documentation/erlang.html" rel="bookmark"
+           title="Permalink to Erlang">Erlang</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://bussiere.github.com/Documentation/lister-package-et-modules-python.html">Lister package et modules python</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2013-08-01T00:00:00">
-                jeu 01 août 2013
+        <abbr class="published" title="2014-02-20T00:00:00">
+                jeu 20 février 2014
         </abbr>
 
         <address class="vcard author">
                 By <a class="url fn" href="http://bussiere.github.com/Documentation/author/bussiere.html">Bussiere</a>
         </address>
 <p>In <a href="http://bussiere.github.com/Documentation/category/geek.html">Geek</a>. </p>
-<p>tags: <a href="http://bussiere.github.com/Documentation/tag/python.html">python</a><a href="http://bussiere.github.com/Documentation/tag/packages.html">packages</a><a href="http://bussiere.github.com/Documentation/tag/package.html">package</a><a href="http://bussiere.github.com/Documentation/tag/list.html">list</a><a href="http://bussiere.github.com/Documentation/tag/lister.html">lister</a><a href="http://bussiere.github.com/Documentation/tag/ubuntu.html">ubuntu</a></p>
-</footer><!-- /.post-info --><p>Comment lister les packages ubuntu installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">dpkg</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="n">packages</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-</td></tr></table>
+<p>tags: <a href="http://bussiere.github.com/Documentation/tag/erlang.html">erlang</a></p>
+</footer><!-- /.post-info -->      <p>Un helloworld en erlang hello.erl</p>
+<div class="highlight"><pre><span class="o">-</span><span class="n">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
+<span class="o">-</span><span class="n">export</span><span class="p">([</span><span class="n">hello_world</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
 
-<p>pour reinstaller sans le install dans les fichiers :</p>
-<div class="highlight"><pre><span class="nx">aptitude</span> <span class="nb">install</span> <span class="err">$</span><span class="p">(</span><span class="nx">cat</span> <span class="o">&lt;</span><span class="nx">textfile</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">hello_world</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">io</span><span class="o">:</span><span class="n">fwrite</span><span class="p">(</span><span class="s">&quot;hello, world</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">).</span>
 </pre></div>
 
 
-<p>Comment lister les modules pythons installes :</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/env</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;help(&#39;modules&#39;)&quot;</span> <span class="o">&gt;</span> <span class="n">modules</span><span class="p">.</span><span class="n">txt</span>
+<p>Quelques commandes utiles pour erlang :</p>
+<p>Compiler le fichier erl :</p>
+<div class="highlight"><pre><span class="n">erlc</span> <span class="n">hello</span><span class="p">.</span><span class="n">erl</span>
 </pre></div>
-</td></tr></table>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
+
+
+<p>executer hello_world dans hello.erl :</p>
+<div class="highlight"><pre><span class="n">erl</span> <span class="o">-</span><span class="n">noshell</span> <span class="o">-</span><span class="n">s</span> <span class="n">hello</span> <span class="n">hello_world</span> <span class="o">-</span><span class="n">s</span> <span class="n">init</span> <span class="n">stop</span>
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

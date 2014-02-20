@@ -10,6 +10,11 @@ Comment lister les packages ubuntu installes :
 	dpkg --get-selections > packages.txt
 
 
+pour reinstaller sans le install dans les fichiers :
+
+    aptitude install $(cat <textfile>)
+
+
 Comment lister les modules pythons installes :
 
 
